@@ -1,8 +1,8 @@
 # git_常用指令
 
-## git status
+'git status'
 
-## git add .
+'git add .'
 
 ## git commit -m "mesasge"
 
