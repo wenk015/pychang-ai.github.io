@@ -7,8 +7,8 @@ git config --global user.name ""
 ```
 git config --global user.email ""
 ```
-## git status
-
+## check current git status
+git status
 ## git add .
 
 ## git commit -m "mesasge"
