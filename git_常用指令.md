@@ -11,10 +11,16 @@ git config --global user.email ""
 
 git status
 
-## add tracked file
+## add tracked file (staged)
 
 git add .
 
-## git commit -m "mesasge"
+## commit file
+git commit -m "mesasge"
 
-## git pull
+## push file
+
+git push
+
+## pull modified files from github
+git pull
