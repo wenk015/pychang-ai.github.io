@@ -24,5 +24,8 @@ if __name__ == '__main__':
     print("nothing")
     s = Student("jack", 60)
     print(s.whoami())
-    import sys
+    import os, sys
     print(sys.path)
+    
+    
+     
