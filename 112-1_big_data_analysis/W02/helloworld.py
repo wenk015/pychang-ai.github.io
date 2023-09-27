@@ -6,16 +6,23 @@ def main():
     C = A.intersection(B)
     C = A.union(B)
     print(C)
- 
+
+
 class Student:
-    def __init__(self, name, grade) :
+    def __init__(self, name, grade):
         self.name = name
         self.grade = grade
+
     def displayStudent(self):
         print("Name = " + self.name)
         print("Grade = " + self.grade)
+
     def whoami(self):
-       
+        return self.name
 
 if __name__ == '__main__':
-    main()
+    print("nothing")
+    s = Student("jack", 60)
+    print(s.whoami())
+    import sys
+    print(sys.path)
