@@ -5,3 +5,5 @@
 ## Team discussion
 
 * Project title
+
+## Mid-term alarm
