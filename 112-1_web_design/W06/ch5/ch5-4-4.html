@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch5-4-4根(root)虛擬類別與否定(negation)虛擬類別</title>
+<meta charset="utf-8">
+<style>
+    :root{
+        background-color: lightgreen;
+    }
+    li{
+        color:red;
+    }
+    li:not(:first-child):not(:last-child){
+        color:blue;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>   
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <ul>
+        <li>11</li>
+        <li>12</li>   
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+</body>
+</html>
