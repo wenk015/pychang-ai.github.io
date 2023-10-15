@@ -9,9 +9,14 @@ def main():
 
 
 class Student:
-    def __init__(self, name, grade):
+    def __init__(self, name: str, grade: int):
         self.name = name
-        self.grade = grade
+        self.__grade = grade
+
+    # def __init__(self, name: str, grade: int, private_grade: int):
+    #     self.name = name
+    #     self.grade = grade
+    #     self.__grade = private_grade
 
     def displayStudent(self):
         print("Name = " + self.name)
@@ -20,12 +25,14 @@ class Student:
     def whoami(self):
         return self.name
 
+    def getGrade(self):
+        print(self.__grade)
+
+
 if __name__ == '__main__':
     print("nothing")
     s = Student("jack", 60)
-    print(s.whoami())
-    import os, sys
-    print(sys.path)
+    print("Who am I " + s.whoami())
     
-    
-     
+    # import os, sys
+    # print(sys.path)
