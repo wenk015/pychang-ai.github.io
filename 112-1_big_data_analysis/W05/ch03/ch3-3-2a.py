@@ -12,3 +12,4 @@ r = requests.get("https://fchart.github.io/test.html", stream=True)
 print(r.raw)
 print(r.raw.read(15))
 
+
