@@ -4,6 +4,5 @@ with open("Surveys.html", "r", encoding="utf8") as fp:
     soup = BeautifulSoup(fp, "lxml")
     print(soup)
     
-    
 import os 
 print(os.getcwd())
