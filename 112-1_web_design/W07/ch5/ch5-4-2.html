@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-<title>ch5-4-2結構(structural)虛擬類別1</title>
-<meta charset="utf-8">
-<style>
-    li:first-child{
-        list-style-type: circle;
-    }
-    li:last-child{
-        list-style-type: decimal;
-    }
-    li:nth-child(2){
-        list-style-type: upper-alpha;
-    }
-    li:nth-last-child(2){
-        list-style-type: lower-alpha;
-    }
-    li:nth-child(even){
-        background-color:#FF0000;
-    }
-    li:nth-child(2n+1){
-        background-color:#00FF00;
-    }
-    li:only-child{
-        text-decoration-line: line-through;
-    }
-</style>
+    <title>ch5-4-2結構(structural)虛擬類別1</title>
+    <meta charset="utf-8">
+    <style>
+        li:first-child {
+            list-style-type: circle;
+        }
+
+        li:last-child {
+            list-style-type: decimal;
+        }
+
+        li:nth-child(2) {
+            list-style-type: upper-alpha;
+        }
+
+        li:nth-last-child(3) {
+            list-style-type: lower-alpha;
+        }
+
+        li:nth-child(even) {
+            background-color: #FF0000;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: #00FF00;
+        }
+
+        li:only-child {
+            text-decoration-line: line-through;
+        }
+    </style>
 </head>
+
 <body>
     <ul>
         <li>1</li>
-        <li>2</li>   
+        <li>2</li>
         <li>3</li>
         <li>4</li>
         <li>5</li>
@@ -38,7 +46,7 @@
     </ul>
     <ul>
         <li>11</li>
-        <li>12</li>   
+        <li>12</li>
         <li>13</li>
         <li>14</li>
         <li>15</li>
@@ -48,4 +56,5 @@
         <li>21</li>
     </ul>
 </body>
+
 </html>
