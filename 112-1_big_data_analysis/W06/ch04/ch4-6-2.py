@@ -1,5 +1,7 @@
 from selenium import webdriver
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 driver = webdriver.Chrome("./chromedriver")
 driver.implicitly_wait(10)
 driver.get("https://fchart.github.io/Example.html")

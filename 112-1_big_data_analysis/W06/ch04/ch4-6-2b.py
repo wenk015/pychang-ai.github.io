@@ -3,7 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.implicitly_wait(10)
 driver.get("https://fchart.github.io/ML/Example.html")

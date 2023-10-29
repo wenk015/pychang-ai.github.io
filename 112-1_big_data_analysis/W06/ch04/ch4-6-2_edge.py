@@ -2,7 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
 driver.implicitly_wait(10)
 driver.get("https://fchart.github.io/ML/Example.html")
