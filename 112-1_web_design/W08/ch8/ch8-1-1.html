@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch8-1-1使用display:inline製作選單</title>
+<meta charset="utf-8">
+<style>
+    * {
+        margin:0;
+    }
+    body{
+        background-color: blue;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        width:300px;
+    }
+    #header{
+        height: 100px;
+        background-color: red;
+        position:relative;
+    }
+    #nav{
+        background-color: skyblue;
+    }
+    #wrapper{
+        float:left;
+        width:100%;
+    }
+    main{
+        margin-left: 180px;
+        background-color: green;
+    }
+    #aside{
+        float:left;
+        width:180px;
+        margin-left:-100%;
+        background-color: blue;
+    }
+    #footer{
+        clear:both;
+        height: 50px;
+        background-color: yellow;
+    }
+    #gohome{
+        position:absolute;
+        background-color: aqua;
+        right:30px;
+        bottom:-16px;
+    }
+    figure{
+        position: relative;
+        left:100px;
+    }
+    #fixed{
+        position: fixed;
+        bottom:0;
+        left:90%;
+        background-color: white;
+    }
+    #menu{
+        background-color: white;
+    }
+    #menu ul{
+        padding: 0;
+    }
+    #menu li{
+        background-color: lightgreen;
+        list-style-type: none;   
+        display: inline;
+        font-size: 24px;
+        padding: 0px 5px;
+    }
+    #menu li a{
+        color: black;
+        text-decoration-line: none;
+    }
+    #menu li a:hover{
+        background-color: lightblue;
+        color: brown;
+    }
+</style>
+</head>
+<body>
+    <header id="header">這裡是header
+    <div id="gohome">
+        <a href="#">回到網站首頁</a>    
+    </div>
+    </header>
+    <div id="menu">
+        <ul>
+            <li><a href="#">台北景點</a></li>
+            <li><a href="#">台南景點</a></li>
+            <li><a href="#">宜蘭景點</a></li>
+            <li><a href="#">澎湖景點</a></li>   
+        </ul>
+    </div>
+    <nav id="nav">這裡是網站導航  <a href="#">第一層</a>| <a href="#">第二層</a></nav>
+    <div id="wrapper">
+        <main>這裡是main
+            <h1>歡迎光臨本網站</h1>
+            <p>本網站介紹旅遊景點</p>
+            <section>
+                <h2>台南旅遊</h2>
+                <article>
+                    <h3>四草綠色隧道</h3>
+                    <p>四草綠色隧道在台江國家公園內，裡面有溼地及豐富的生態資源，可以坐船遊覽由紅樹林交織成的綠色隧道，潮間帶的招潮蟹、彈塗魚與紅樹林，體會不一樣的大自然感受。</p>
+                    <figure>
+                        <img src="img/1.jpg" alt="四草綠色隧道">
+                        <figcaption>四草綠色隧道</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <h3>北門井仔腳瓦盤鹽田</h3>
+                    <p>井仔腳瓦盤鹽田是北門的第一座鹽田，西元1818年開始曬鹽，因人工成本過高，在2002年停止曬鹽，鹽田漸漸荒廢，目前開發為觀光景點，遊客在此可體驗傳統曬鹽、挑鹽與收鹽。</p>
+                    <figure>
+                        <img src="img/2.jpg" alt="北門井仔腳瓦盤鹽田">
+                        <figcaption>北門井仔腳瓦盤鹽田</figcaption>
+                    </figure>
+                </article>
+            </section>
+        </main>
+    </div>
+    <aside id="aside">這裡是aside</aside>
+    <div id="fixed"><a href="#header">回到頁首</a></div>
+    <footer id="footer">這裡是footer</footer>
+</body>
+</html>

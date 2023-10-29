@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <title>ch7-2-1 position:absolute relative的使用</title>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: blue;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        #header {
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+
+        #gohome {
+            position: absolute;
+            background-color: white;
+            right: 30px;
+            bottom: -18px;
+        }
+
+        #nav {
+            background-color: skyblue;
+        }
+
+        #wrapper {
+            float: left;
+            width: 100%;
+        }
+
+        main {
+            margin-left: 180px;
+            background-color: green;
+        }
+
+        #aside {
+            float: left;
+            width: 180px;
+            margin-left: -100%;
+            background-color: blue;
+        }
+
+        #footer {
+            clear: both;
+            height: 50px;
+            background-color: yellow;
+        }
+
+        article {
+            position: relative;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">這裡是header
+        <div id="gohome">
+            <a href="#">回到網站首頁</a>
+        </div>
+    </header>
+    <nav id="nav">這裡是網站導航 <a href="#">第一層</a>| <a href="#">第二層</a></nav>
+    <div id="wrapper">
+        <main>這裡是main
+            <h1>歡迎光臨本網站</h1>
+            <p>本網站介紹台南與台北旅遊景點</p>
+            <section>
+                <h2>台南景點</h2>
+                <article>
+                    <h3>四草綠色隧道</h3>
+                    <p>四草綠色隧道的內容</p>
+                    <figure>
+                        <img src="img/1.jpg" alt="四草綠色隧道">
+                        <figcaption>四草綠色隧道</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <h3>台南景點2</h3>
+                    <p>台南景點2的內容</p>
+                </article>
+            </section>
+            <section>
+                <h2>台北景點</h2>
+                <article>
+                    <h3>台北景點1</h3>
+                    <p>台北景點1的內容</p>
+                </article>
+                <article>
+                    <h3>台北景點2</h3>
+                    <p>台北景點2的內容</p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <aside id="aside">這裡是aside</aside>
+    <footer id="footer">這裡是footer</footer>
+</body>
+
+</html>

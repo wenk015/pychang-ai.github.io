@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <title>ch8-2-1 比較行內、id、類別與標籤CSS的套用優先權</title>
+    <meta charset="utf-8">
+    <style>
+        #p {
+            color: green;
+        }
+
+        .p {
+            color: blue;
+        }
+
+        p {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="color:red;" id="p" class="p">文字套用行內、id、類別與標籤p的CSS</p>
+    <p id="p" class="p">文字套用id、類別與標籤p的CSS</p>
+    <p class="p">文字套用類別與標籤p的CSS</p>
+    <p>文字套用標籤p的CSS</p>
+</body>
+
+</html>
