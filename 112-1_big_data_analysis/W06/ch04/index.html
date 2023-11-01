@@ -23,7 +23,51 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#fchart">關於</a>
+              <a class="nav-link<!DOCTYPE html>
+                <html>
+                <head>
+                  <meta charset="utf-8">
+                  <title>Radar Chart</title>
+                </head>
+                <body>
+                
+                <canvas id="canvas" width="400" height="400"></canvas>
+                
+                <script>
+                const ctx = document.getElementById("canvas").getContext("2d");
+                
+                // 数据
+                const data = [80, 60, 50, 65, 70]; 
+                
+                // 计算数据的最大值,用于normalize
+                const max = Math.max(...data);
+                
+                // 绘制雷达图
+                ctx.beginPath();
+                
+                let x = 200; 
+                let y = 200; 
+                
+                data.forEach(val => {
+                  // 将数据值转换为以200, 200为中心的点
+                  const angle = (Math.PI * 2) / data.length;
+                  const radians = angle * i;
+                  
+                  x = 200 + Math.cos(radians) * val/max * 150;
+                  y = 200 + Math.sin(radians) * val/max * 150;  
+                
+                  // 连接点
+                  i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+                });
+                
+                ctx.closePath();
+                ctx.fillStyle = 'rgba(255, 99, 132, 0.2)';
+                ctx.fill();
+                
+                </script>
+                
+                </body>
+                </html> js-scroll-trigger" href="#fchart">關於</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#flowchart">流程圖直譯器</a>
