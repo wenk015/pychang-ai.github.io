@@ -1,151 +1,113 @@
-// Custom Script
-// Developed by: Samson.Onna
-var customScripts = {
-    profile: function () {
-        // portfolio
-        if ($('.isotopeWrapper').length) {
-            var $container = $('.isotopeWrapper');
-            var $resize = $('.isotopeWrapper').attr('id');
-            // initialize isotope
-            $container.isotope({
-                itemSelector: '.isotopeItem',
-                resizable: false, // disable normal resizing
-                masonry: {
-                    columnWidth: $container.width() / $resize
-                }
-            });
-            $("a[href='#top']").click(function () {
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-                return false;
-            });
-            $('.navbar-inverse').on('click', 'li a', function () {
-                $('.navbar-inverse .in').addClass('collapse').removeClass('in').css('height', '1px');
-            });
-            $('#filter a').click(function () {
-                $('#filter a').removeClass('current');
-                $(this).addClass('current');
-                var selector = $(this).attr('data-filter');
-                $container.isotope({
-                    filter: selector,
-                    animationOptions: {
-                        duration: 1000,
-                        easing: 'easeOutQuart',
-                        queue: false
-                    }
-                });
-                return false;
-            });
-            $(window).smartresize(function () {
-                $container.isotope({
-                    // update columnWidth to a percentage of container width
-                    masonry: {
-                        columnWidth: $container.width() / $resize
-                    }
-                });
-            });
-        }
-    },
-    fancybox: function () {
-        // fancybox
-        $(".fancybox").fancybox();
-    },
-    onePageNav: function () {
+/* Author:WebThemez
+ * Author URI:http://webthemez.com
+ * License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
+ */
 
-        		if($('#main-nav ul li:first-child').hasClass('active')){
-					$('#main-nav').css('background','none');
+(function($){
+	$(document).ready(function(){
+	
+		$(".banner-image").backstretch('images/banner.jpg');
+		
+		// Fixed header
+		//-----------------------------------------------
+		$(window).scroll(function() {
+			if (($(".header.fixed").length > 0)) { 
+				if(($(this).scrollTop() > 0) && ($(window).width() > 767)) {
+					$("body").addClass("fixed-header-on");
+				} else {
+					$("body").removeClass("fixed-header-on");
+				}
+			};
+		});
+
+		$(window).load(function() {
+			if (($(".header.fixed").length > 0)) { 
+				if(($(this).scrollTop() > 0) && ($(window).width() > 767)) {
+					$("body").addClass("fixed-header-on");
+				} else {
+					$("body").removeClass("fixed-header-on");
+				}
+			};
+		});
+		
+	   $('#quote-carousel').carousel({
+		 pause: true,
+		 interval: 4000,
+	   });
+		//Scroll Spy
+		//-----------------------------------------------
+		if($(".scrollspy").length>0) {
+			$("body").addClass("scroll-spy");
+			$('body').scrollspy({ 
+				target: '.scrollspy',
+				offset: 152
+			});
 		}
-        $('#mainNav').onePageNav({        
-            currentClass: 'active',
-            changeHash: false,
-            scrollSpeed: 950,
-            scrollThreshold: 0.2,
-            filter: '',
-            easing: 'swing',
-            begin: function () {
-                //I get fired when the animation is starting
-				
-            },
-            end: function () {
-                //I get fired when the animation is ending
-				if(!$('#main-nav ul li:first-child').hasClass('active')){
-					$('.header').addClass('addBg');					
-				}else{
-						$('.header').removeClass('addBg');
-				}
-				
-            },
-            scrollChange: function ($currentListItem) {
-                //I get fired when you enter a section and I pass the list item of the section
-				if(!$('#main-nav ul li:first-child').hasClass('active')){
-					$('.header').addClass('addBg');
-				}else{
-						$('.header').removeClass('addBg');
-				}
-            }
-        });
-    },
-    slider: function () {
-        $('#da-slider').cslider({
-            autoplay: true,
-            bgincrement: 0
-        });
-    },
-    owlSlider: function () {
-        var owl = $("#owl-demo");
-        owl.owlCarousel();
-        // Custom Navigation Events
-        $(".next").click(function () {
-            owl.trigger('owl.next');
-        })
-        $(".prev").click(function () {
-            owl.trigger('owl.prev');
-        })
-    },
-    bannerHeight: function () {
-        var bHeight = $(".banner-container").height();
-        $('#da-slider').height(bHeight);
-        $(window).resize(function () {
-            var bHeight = $(".banner-container").height();
-            $('#da-slider').height(bHeight);
-        });
-    },
-    init: function () {
-        customScripts.onePageNav();
-        customScripts.profile();
-        customScripts.fancybox();
-        customScripts.slider();
-        customScripts.owlSlider();
-        customScripts.bannerHeight();
-    }
-}
-$('document').ready(function () {
-    customScripts.init();
-	$('#diagram-id-1').diagram({ 
-			size: "190",
-			borderWidth: "10",
-			bgFill: "#95a5a6",
-			frFill: "#3498db",
-			textSize: 54,
-			textColor: '#1a1a1a'
-		}); 
-		$('#diagram-id-2').diagram({ 
-			size: "190",
-			borderWidth: "10",
-			bgFill: "#95a5a6",
-			frFill: "#3498db",
-			textSize: 54,
-			textColor: '#333'
-		});
 
-		$('#diagram-id-3').diagram({ 
-			size: "190",
-			borderWidth: "10",
-			bgFill: "#95a5a6",
-			frFill: "#3498db",
-			textSize: 54,
-			textColor: '#1a1a1a'
-		});
-		$(window).load(function() { 
-			  $('#filter .current').trigger('click');
-		});
-});
+		//Smooth Scroll
+		//-----------------------------------------------
+		if ($(".smooth-scroll").length>0) {
+			$('.smooth-scroll a[href*=#]:not([href=#]), a[href*=#]:not([href=#]).smooth-scroll').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top-151
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		}
+
+		// Animations
+		//-----------------------------------------------
+		if (($("[data-animation-effect]").length>0) && !Modernizr.touch) {
+			$("[data-animation-effect]").each(function() {
+				var $this = $(this),
+				animationEffect = $this.attr("data-animation-effect");
+				if(Modernizr.mq('only all and (min-width: 768px)') && Modernizr.csstransitions) {
+					$this.appear(function() {
+						setTimeout(function() {
+							$this.addClass('animated object-visible ' + animationEffect);
+						}, 400);
+					}, {accX: 0, accY: -130});
+				} else {
+					$this.addClass('object-visible');
+				}
+			});
+		};
+
+		// Isotope filters
+		//-----------------------------------------------
+		if ($('.isotope-container').length>0) {
+			$(window).load(function() {
+				$('.isotope-container').fadeIn();
+				var $container = $('.isotope-container').isotope({
+					itemSelector: '.isotope-item',
+					layoutMode: 'masonry',
+					transitionDuration: '0.6s',
+					filter: "*"
+				});
+				// filter items on button click
+				$('.filters').on( 'click', 'ul.nav li a', function() {
+					var filterValue = $(this).attr('data-filter');
+					$(".filters").find("li.active").removeClass("active");
+					$(this).parent().addClass("active");
+					$container.isotope({ filter: filterValue });
+					return false;
+				});
+			});
+		};
+
+		//Modal
+		//-----------------------------------------------
+		if($(".modal").length>0) {
+			$(".modal").each(function() {
+				$(".modal").prependTo( "body" );
+			});
+		}
+
+	}); // End document ready
+})(this.jQuery);
