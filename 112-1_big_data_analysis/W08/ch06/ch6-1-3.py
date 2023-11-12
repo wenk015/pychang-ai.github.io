@@ -1,5 +1,9 @@
 import json 
 import requests
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
 
 url = "https://www.googleapis.com/books/v1/volumes?maxResults=5&q=Python&projection=lite"
 jsonfile = "GoogleBooks.json"
