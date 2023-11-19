@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Server-Sent Events</title>
+</head>
+<body>
+<div id="sse"></div>
+<script>
+if(typeof(EventSource)!=="undefined"){
+    var s=new EventSource("http://127.0.0.1/time.php");
+    s.onmessage=function(e){
+        document.getElementById("sse").innerHTML+=e.data + "<br>";
+    };
+}else{
+    document.getElementById("sse").innerHTML="瀏覽器未支援Server-Send Events";
+}
+</script>
+</body>
+</html>

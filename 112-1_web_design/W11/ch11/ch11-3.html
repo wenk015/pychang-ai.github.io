@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch11-3網頁中撥放多媒體</title>
+<meta charset="utf-8">
+<style>
+video,audio,iframe{
+    margin:5px;    
+}
+</style>
+</head>
+<body>
+<video width="200" height="315" controls>
+    <source src="plant.mp4" type="video/mp4">
+    <source src="plant.ogg" type="video/ogg">
+    瀏覽器沒有支援HTML5的影片撥放
+</video><br>
+<audio controls>
+    <source src="noise.mp3" type="audio/mpeg">
+    <source src="noise.ogg" type="audio/ogg">
+    瀏覽器沒有支援聲音撥放
+</audio><br>
+<iframe width="200" height="315" src="https://www.youtube.com/embed/7RQDIPltktE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br>
+</body>
+</html>

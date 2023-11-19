@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch12-3-8 JavaScript的運算子優先權</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:200px;
+    border: 1px red solid;
+    margin: 10px;
+}     
+</style>
+</head>
+<body>
+<div id="op1"></div>
+<div id="op2"></div>
+<script>
+document.getElementById("op1").innerHTML = "(2+2*5-18/6)的結果為"+(2+2*5-18/6);
+document.getElementById("op2").innerHTML = "(2+7)%4的結果為"+((2+7)%4);
+</script>
+</body>
+</html>

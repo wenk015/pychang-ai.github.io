@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch10-2-5使用transition產生動畫效果</title>
+<meta charset="utf-8">
+<style>
+div {
+    width: 250px;
+    height: 100px;
+    background-color: orange;
+    border: 1px blue dashed;
+    margin:100px 0;
+}
+.div1{
+    -webkit-transition: 1s;
+    -ms-transition:  1s;
+    transition: 1s;       
+}
+.div1:hover {
+    width: 500px;
+}
+.div2 {
+    -webkit-transition: 2s background-color ease 1s;
+    -ms-transition: 2s background-color ease 1s;
+    transition: 2s background-color ease 1s;
+}
+.div2:hover {
+    background-color: blue;
+}
+</style>
+</head>
+<body>
+<div class="div1">transition: 1s</div>
+<div class="div2">transition: 2s background-color ease 1s</div>
+</body>
+</html>

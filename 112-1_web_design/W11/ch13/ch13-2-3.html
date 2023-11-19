@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch13-2-3 while迴圈</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:500px;
+    border: 1px red solid;
+    margin: 10px;
+}   
+</style>
+</head>
+<body>
+<div id="loop1"></div>
+<div id="loop2"></div>
+<div id="loop3"></div>
+<div id="loop4"></div>
+<script>
+var i=1,r1="";
+while(i<10){
+    r1=r1+i+" ";
+    i++;
+}
+document.getElementById("loop1").innerHTML = r1;
+var sum=0,i=1,r2="";
+while(i<10){
+    sum=sum+i;
+    i++;
+}
+r2=sum;
+document.getElementById("loop2").innerHTML = r2;
+var i,j,r3="";
+for(i=1;i<10;i++){
+    j=1;
+    while(j<10){
+        r3+=i+"*"+j+"="+i*j+" ";
+        j++;
+    }
+    r3+="<br>";
+}
+document.getElementById("loop3").innerHTML = r3;
+var i=10,r4="";
+do {
+    r4+=i+" ";
+    i--;
+}while(i>0)
+document.getElementById("loop4").innerHTML = r4;
+</script>
+</body>
+</html>

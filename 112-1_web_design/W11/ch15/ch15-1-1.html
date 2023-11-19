@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>15-1-1標籤節點、文字節點與屬性節點</title>
+<meta charset="utf-8">
+<script>
+function showLi(){
+    var result = document.getElementById("result");
+    var li = document.getElementsByTagName("li");
+    var menu = document.getElementById("menu");
+    for(var i=0;i<li.length;i++){
+        result.innerHTML += "<br>"+li[i].nodeType+" "+li[i].nodeName+" ";
+        result.innerHTML += li[i].childNodes[0].nodeType+" "+li[i].childNodes[0].nodeValue;
+    }
+    result.innerHTML += "<br>"+menu.attributes["title"].nodeType+" "+menu.getAttribute("title");
+}
+</script>
+</head>
+<body>
+<ul id="menu" title="旅遊景點">
+    <li>台北市景點
+        <ul>
+            <li>台北101</li>
+            <li>迪化街</li>
+            <li>士林夜市</li>
+            
+        </ul>
+    </li>
+    <li>台南景點
+        <ul>
+            <li>赤崁樓</li>
+            <li>台南孔廟</li>
+        </ul>
+    </li>
+</ul>
+<div>
+<input type="submit" value="找出所有li" onclick="showLi()">
+<p id="result">在此顯示結果</p>    
+</div>
+</body>
+</html>

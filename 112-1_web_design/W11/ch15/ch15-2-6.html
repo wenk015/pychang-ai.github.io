@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>15-2-6插入圖片</title>
+<meta charset="utf-8">
+<script>
+function insertImg(){
+    var imgOld = document.getElementsByTagName("img")[0];
+    var imgNew = document.createElement("img");
+    imgNew.setAttribute("src","img/2.jpg");
+    imgNew.setAttribute("width","300");
+    imgNew.setAttribute("height","200");
+    imgOld.parentElement.insertBefore(imgNew,imgOld);
+}
+</script>
+</head>
+<body>
+<img src="img/1.jpg" width="300" height="200">
+<div>
+<input type="submit" value="插入圖片" onclick="insertImg()">    
+</div>
+</body>
+</html>

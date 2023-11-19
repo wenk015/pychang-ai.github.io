@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
 
 titanic = pd.read_csv("titanic_pre.csv")
 titanic["Died"] = np.where(titanic["Survived"]==0, 1, 0)

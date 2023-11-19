@@ -1,5 +1,9 @@
 import pandas as pd
 import numpy as np
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
 
 titanic = pd.read_csv("titanic_data.csv")
 print("---檢查PassengerId欄位是否是唯一值---")

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch12-3-5 JavaScript的邏輯運算子</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:250px;
+    border: 1px red solid;
+    margin: 10px;
+}     
+</style>
+</head>
+<body>
+<div id="op1"></div>
+<div id="op2"></div>
+<div id="op3"></div>
+<script>
+var a=85;
+document.getElementById("op1").innerHTML = "(a>=60)&&(a<=80)的結果為"+((a>=60)&&(a<=80));
+document.getElementById("op2").innerHTML = "(a>=60)||(a<=80)的結果為"+((a>=60)||(a<=80));
+document.getElementById("op3").innerHTML = "!(a>=60)的結果為"+!(a>=60);
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>15-1-2找出父、子與手足節點</title>
+<meta charset="utf-8">
+<script>
+function findChildNode(){
+    var result = document.getElementById("result1");
+    var menu = document.getElementById("menu");
+    if (menu.hasChildNodes()){
+        for(var i=0;i<menu.childNodes.length;i++){
+            if (menu.childNodes[i].nodeType == 1){
+                result.innerHTML += "<br>"+menu.childNodes[i].firstChild.nodeValue;
+            }  
+        }
+    }
+}
+function findParentNode(){
+    var result = document.getElementById("result2");
+    var tp = document.getElementById("tp");
+    result.innerHTML += "<br>"+tp.parentNode.getAttribute("title");
+}
+function findSiblingNode(){
+    var result = document.getElementById("result3");
+    var dh = document.getElementById("dh");
+    result.innerHTML += "<br>"+dh.previousSibling.firstChild.nodeValue;
+    result.innerHTML += "<br>"+dh.nextSibling.firstChild.nodeValue;
+}
+</script>
+</head>
+<body>
+<ul id="menu" title="旅遊景點">
+    <li id="tp">台北市景點(tp)
+        <ul><li>台北101</li><li id="dh">迪化街(dh)</li><li>士林夜市</li></ul>
+    </li>
+    <li>台南景點
+        <ul><li>赤崁樓</li><li>台南孔廟</li></ul>
+    </li>
+</ul>
+<div>
+<input type="submit" value="找出menu的子節點" onclick="findChildNode()">
+<p id="result1">在此顯示結果</p>    
+</div>
+<div>
+<input type="submit" value="找出tp的父節點" onclick="findParentNode()">
+<p id="result2">在此顯示結果</p>    
+</div>
+<div>
+<input type="submit" value="找出dh的手足節點" onclick="findSiblingNode()">
+<p id="result3">在此顯示結果</p>    
+</div>
+</body>
+</html>

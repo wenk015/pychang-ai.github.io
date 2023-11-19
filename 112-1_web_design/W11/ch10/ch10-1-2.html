@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch10-1-2使用linear-gradient製作漸層背景</title>
+<meta charset="utf-8">
+<style>
+p{
+    font-size:30px;
+    text-align: center;
+}
+.lg1{
+    background: linear-gradient(yellow, orange);
+}
+.lg2{
+    background: linear-gradient(to right,yellow, orange);
+}
+.lg3{
+    background: linear-gradient(to top right,yellow, orange);
+}
+.lg4{
+    background: linear-gradient(30deg,yellow, orange);
+}
+.lg5{
+    background: linear-gradient(to left, red, yellow, orange);
+}
+.lg6{
+    background: linear-gradient(to left,rgba(255,0,0,0),rgba(255,0,0,0.5));
+}
+</style>
+</head>
+<body>
+<p class="lg1">套用linear-gradient(yellow, orange)的背景</p>
+<p class="lg2">套用linear-gradient(to right,yellow, orange)的背景</p>
+<p class="lg3">套用linear-gradient(to top right,yellow, orange)的背景</p>
+<p class="lg4">套用linear-gradient(30deg,yellow, orange)的背景</p>
+<p class="lg5">套用linear-gradient(to left, red, yellow, orange)的背景</p>
+<p class="lg6">套用linear-gradient(to left, rgba(255,0,0,0),rgba(255,0,0,0.5))的背景</p>
+</body>
+</html>

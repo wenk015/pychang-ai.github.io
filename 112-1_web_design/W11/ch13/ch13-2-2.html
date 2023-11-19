@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch13-2-2 for迴圈</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:500px;
+    border: 1px red solid;
+    margin: 10px;
+}    
+</style>
+</head>
+<body>
+<div id="loop1"></div>
+<script>
+var i,j,r1="";
+for(i=1;i<10;i++){
+    for(j=1;j<10;j++){
+        r1+=i+"*"+j+"="+i*j+" ";
+    }
+    r1+="<br>";
+}
+document.getElementById("loop1").innerHTML = r1;
+</script>
+</body>
+</html>

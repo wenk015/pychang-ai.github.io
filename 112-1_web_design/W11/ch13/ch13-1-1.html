@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch13-1-1 單向選擇與雙向選擇</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:200px;
+    border: 1px red solid;
+    margin: 10px;
+}     
+</style>
+</head>
+<body>
+<div id="if1"></div>
+<div id="if2"></div>
+<div id="if3"></div>
+<script>
+var score=60,a=13,r1,r2,r3;
+if (score>=60){
+    r1="及格"; 
+}
+document.getElementById("if1").innerHTML = r1;
+if ((a%2)==1){
+    r2="奇數";
+} else {
+    r2="偶數";
+}
+document.getElementById("if2").innerHTML = r2;
+r3=(((a%2)==1)?'奇數':'偶數');
+document.getElementById("if3").innerHTML = r3;
+</script>
+</body>
+</html>

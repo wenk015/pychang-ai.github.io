@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch10-2-4使用skew傾斜區塊</title>
+<meta charset="utf-8">
+<style>
+div {
+    width: 250px;
+    height: 100px;
+    background-color: orange;
+    border: 1px blue dashed;
+    margin:100px;
+}
+.skew1 {
+    -ms-transform: skew(30deg,0);
+    -webkit-transform: skew(30deg,0);
+    transform: skew(30deg,0);
+}
+.skew2 {
+    -ms-transform: skew(0,30deg);
+    -webkit-transform: skew(0,30deg);
+    transform: skew(0,30deg);
+}
+</style>
+</head>
+<body>
+<div>沒有傾斜區塊</div>
+<div class="skew1">使用transform: skew(30deg,0)傾斜區塊</div>
+<div class="skew2">使用transform: skew(0,30deg)傾斜區塊</div>
+</body>
+</html>

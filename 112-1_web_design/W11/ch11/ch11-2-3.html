@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch11-2-3使用CSS設定表單(一)</title>
+<meta charset="utf-8">
+<style>
+input{
+    border: 1px blue solid;
+    margin:10px 0;
+}
+input:required{
+    background-color: yellow;
+}
+input:disabled {
+    background-color: lightgray;
+}
+input:invalid {
+    border: 1px solid red;
+}
+input:focus {
+    background-color: azure;
+}
+input[type=button]:hover{
+    background-color: orange;    
+}
+</style>
+</head>
+<body>
+<form>
+    姓名<input type="text" name="usrname" required placeholder="王大寶"><br>
+    密碼<input type="password" name="usrpass"  required><br>
+    生日<input type="date" name="usrbir"><br>
+    電子郵件<input type="email" name="usremail"><br>
+    電話<input type="tel" name="usrphone" value="09xx-xxx-xxx"><br>
+    輸入時間<input type="time" name="usrtime"><br>
+    輸入日期時間<input type="datetime-local" name="usrdatetime"><br>
+    輸入網址<input type="url" name="usrurl"><br>
+    訂購個數(1-10)<input type="number" name="num1" min="1" max="10" disabled><br>
+    訂購個數(2-10，只允許偶數)<input type="number" name="num2" min="2" max="10" step="2"><br>
+    輸入個數1<input type="range" name="num3" min="1" max="10">10<br>
+    顏色<input type="color" name="color"><br>
+    <input type="button" value="送出">
+    <input type="reset" value="清空表單">   
+</form> 
+</body>
+</html>

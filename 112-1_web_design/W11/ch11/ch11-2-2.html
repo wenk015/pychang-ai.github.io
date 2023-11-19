@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch11-2-2製作表單(二)</title>
+<meta charset="utf-8">
+<style>
+input,select{
+    margin:5px;
+}
+fieldset{
+    margin:5px;
+    width:350px;    
+}
+</style>
+<script>
+function getData() {
+    var result="";
+    result += document.getElementsByName('textarea')[0].value + "<br>";
+    var gender = document.getElementsByName('gender');
+    result+=gender[0].value + " " + gender[0].checked + "  ";
+    result+=gender[1].value + " " + gender[1].checked + "  ";
+    result+=gender[2].value + " " + gender[2].checked + "  ";
+    result += "<br>";
+    var drink = document.getElementsByName('drink');
+    result+=drink[0].value + " " + drink[0].checked + "  ";
+    result+=drink[1].value + " " + drink[1].checked + "  ";
+    result+=drink[2].value + " " + drink[2].checked + "  ";
+    result += "<br>";
+    result += document.getElementsByName('num1')[0].value + "<br>";
+    var sport = document.getElementsByName('sport');
+    result += sport[0].value + " " + sport[0].checked + "  ";
+    result += sport[1].value + " " + sport[1].checked + "  ";
+    result += sport[2].value + " " + sport[2].checked + "  ";
+    result += "<br>";
+    document.getElementById('result').innerHTML= result;
+}    
+</script>
+</head>
+<body>
+<form>
+    <textarea name="textarea" rows="10" cols="50">請在此輸入訊息</textarea><br>
+    <fieldset>
+        <legend>性別</legend>    
+        <input type="radio" name="gender" value="male"> 男 <br>
+        <input type="radio" name="gender" value="female" checked> 女 <br>
+        <input type="radio" name="gender" value="other"> 其他 <br>
+    </fieldset>
+    <fieldset>
+        <legend>飲料</legend>      
+        <input type="radio" name="drink" id="coffee" value="coffee">
+        <label for="coffee"> 咖啡 </label><br>
+        <input type="radio" name="drink" id="tea" value="tea">
+        <label for="tea"> 茶 </label><br>
+        <input type="radio" name="drink" id="water" value="water">
+        <label for="water"> 水 </label><br>
+    </fieldset>
+    訂購個數(1-5)
+    <select name="num1">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <fieldset>
+        <legend>喜歡的運動</legend>    
+        <input type="checkbox" name="sport" value="baseball">棒球<br>
+        <input type="checkbox" name="sport" value="basketball">籃球<br>
+        <input type="checkbox" name="sport" value="football">足球<br>
+    </fieldset>
+    <input type="button" onclick="getData()" value="送出">
+    <input type="reset" value="清空表單">
+    <p id="result"></p>
+</form> 
+</body>
+</html>

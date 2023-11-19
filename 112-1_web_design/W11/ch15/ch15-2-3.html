@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>15-2-3新增圖片</title>
+<meta charset="utf-8">
+<script>
+function createImg(){
+    var img = document.createElement("img");
+    img.setAttribute("src","img/2.jpg");
+    img.setAttribute("width","300");
+    img.setAttribute("height","200");
+    document.body.appendChild(img);
+}
+</script>
+</head>
+<body>
+<img src="img/1.jpg" width="300" height="200">
+<div>
+<input type="submit" value="新增圖片" onclick="createImg()">    
+</div>
+</body>
+</html>

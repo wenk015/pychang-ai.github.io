@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>查詢地理位置座標</title>
+</head>
+<body>
+    <p>目前地理位置座標</p><p id="gps">GPS顯示於此</p>
+    <button onclick="getGPS()">查詢地理位置座標</button>
+    <script>
+        var t=document.getElementById("gps");
+        function getGPS(){
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showGPS);
+            }else{
+                t.innerHTML="瀏覽器不支援查詢地理位置座標";
+            }
+        }
+        function showGPS(x){
+            t.innerHTML="緯度：" + x.coords.latitude + "<br>經度：" + x.coords.longitude;	
+        }
+    </script>
+</body>
+</html>

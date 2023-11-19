@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch14-3-1事件</title>
+<meta charset="utf-8">
+<style>
+    div {
+        width:200px;
+        border: 1px red solid;
+        margin: 10px;
+    }    
+</style>
+<script>
+function showDate(){
+    document.getElementById('js2').innerHTML = Date();
+}
+window.onload = function(){
+    var btn1 = document.getElementById("btn1");
+    btn1.onclick = function(){
+        document.getElementById('js3').innerHTML = Date();
+    }
+}
+</script>
+</head>
+<body>
+<div>
+    <p id="js1">按下按鈕在此顯示時間</p>
+    <button type="button" onclick="document.getElementById('js1').innerHTML = Date()">點選顯示時間</button>   
+</div>
+<div>
+    <p id="js2">按下按鈕在此顯示時間</p>
+    <button type="button" onclick="showDate()">點選顯示時間</button>   
+</div>
+<div>
+    <p id="js3">按下按鈕在此顯示時間</p>
+    <button type="button" id="btn1">點選顯示時間</button>   
+</div>
+</body>
+</html>

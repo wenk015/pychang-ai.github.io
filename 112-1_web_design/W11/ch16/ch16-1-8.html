@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Canvas功能-載入圖片</title>
+</head>
+<body>
+<img id="img" src="img.jpg"  width="200" height="300"><br>
+<canvas id="Canvas1" width="300" height="400" style="border:2px solid #0000ff;">
+瀏覽器不支援HTML5 Canvas
+</canvas>
+<script>
+window.onload = function() {
+    var ca = document.getElementById("Canvas1");
+    var ct = ca.getContext("2d");
+    var pic = document.getElementById("img");
+    ct.drawImage(pic, 10, 10, 280, 380); //照片左上角座標為(10,10)，寬度為280，高度為380
+}
+</script>
+</body>
+</html>

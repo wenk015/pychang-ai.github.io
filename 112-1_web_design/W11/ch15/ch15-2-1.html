@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>15-2-1更改屬性節點</title>
+<meta charset="utf-8">
+<script>
+function changeImg(){
+    var img = document.getElementsByTagName("img")[0];
+    img.setAttribute("src","img/2.jpg");
+}
+</script>
+</head>
+<body>
+<img src="img/1.jpg" width="300" height="200">
+<div>
+<input type="submit" value="更改圖片" onclick="changeImg()">    
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch12-3-4 JavaScript的比較運算子</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:200px;
+    border: 1px red solid;
+    margin: 10px;
+}    
+</style>
+</head>
+<body>
+<div id="op1"></div>
+<div id="op2"></div>
+<div id="op3"></div>
+<div id="op4"></div>
+<div id="op5"></div>
+<div id="op6"></div>
+<div id="op7"></div>
+<div id="op8"></div>
+<div id="op9"></div>
+<div id="op10"></div>
+<script>
+var a=10,b=3;
+document.getElementById("op1").innerHTML = "a>b的結果為"+(a>b);
+document.getElementById("op2").innerHTML = "a>=b的結果為"+(a>=b);
+document.getElementById("op3").innerHTML = "a&ltb的結果為"+(a<b);
+document.getElementById("op4").innerHTML = "a<=b的結果為"+(a<=b);
+document.getElementById("op5").innerHTML = "a==b的結果為"+(a==b);
+document.getElementById("op6").innerHTML = "a===b的結果為"+(a===b);
+document.getElementById("op7").innerHTML = "a!=b的結果為"+(a!=b);
+document.getElementById("op8").innerHTML = "a!==b的結果為"+(a!==b);
+a="3",b=3;
+document.getElementById("op9").innerHTML = "a==b的結果為"+(a==b);
+document.getElementById("op10").innerHTML = "a===b的結果為"+(a===b);
+</script>
+</body>
+</html>

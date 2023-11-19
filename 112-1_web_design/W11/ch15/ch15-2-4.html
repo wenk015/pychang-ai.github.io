@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>15-2-4刪除圖片</title>
+<meta charset="utf-8">
+<script>
+function removeImg(){
+    var img = document.getElementsByTagName("img")[1];
+    img.parentElement.removeChild(img);
+}
+</script>
+</head>
+<body>
+<img src="img/1.jpg" width="300" height="200"><br>
+<img src="img/2.jpg" width="300" height="200">
+<div>
+<input type="submit" value="刪除第二張圖片" onclick="removeImg()">    
+</div>
+</body>
+</html>

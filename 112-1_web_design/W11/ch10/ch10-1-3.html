@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch10-1-3使用box-shadow製作區塊陰影特效</title>
+<meta charset="utf-8">
+<style>
+div{
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    margin:50px auto;
+}
+.bs1{
+    box-shadow: 20px 10px 10px red;
+}
+.bs2{
+    box-shadow: 20px 10px 20px red;
+}
+.bs3{
+    box-shadow: 20px 10px 20px green;
+}
+.bs4{
+    box-shadow: 20px 10px 20px 10px green;
+}
+.bs5{
+    box-shadow: 20px 10px 20px 20px green;
+}
+.bs6{
+    box-shadow: 0px 0px 50px green inset;
+}
+</style>
+</head>
+<body>
+<div class="bs1">套用box-shadow: 20px 10px 10px red</div>
+<div class="bs2">套用box-shadow: 20px 10px 20px red</div>
+<div class="bs3">套用box-shadow: 20px 10px 20px green</div>
+<div class="bs4">套用box-shadow: 20px 10px 20px 10px green</div>
+<div class="bs5">套用box-shadow: 20px 10px 20px 20px green</div>
+<div class="bs6">套用box-shadow: 0px 0px 50px green inset</div>
+</body>
+</html>

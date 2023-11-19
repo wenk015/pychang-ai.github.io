@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch12-3-2 JavaScript的算術運算子、遞增與遞減運算子</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:200px;
+    border: 1px red solid;
+    margin: 10px;
+}    
+</style>
+</head>
+<body>
+<div id="op1"></div>
+<div id="op2"></div>
+<div id="op3"></div>
+<div id="op4"></div>
+<div id="op5"></div>
+<div id="op6"></div>
+<div id="op7"></div>
+<script>
+var a,b,c;
+a=10,b=3;
+c=a+b;
+document.getElementById("op1").innerHTML = c;
+c=a-b;
+document.getElementById("op2").innerHTML = c;
+c=a*b;
+document.getElementById("op3").innerHTML = c;
+c=a/b;
+document.getElementById("op4").innerHTML = c;
+c=a%b;
+document.getElementById("op5").innerHTML = c;
+a++;
+document.getElementById("op6").innerHTML = a;
+a--;
+document.getElementById("op7").innerHTML = a;
+</script>
+</body>
+</html>

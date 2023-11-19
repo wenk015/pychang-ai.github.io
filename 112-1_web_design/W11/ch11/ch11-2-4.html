@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch11-2-4使用CSS設定表單(二)</title>
+<meta charset="utf-8">
+<style>
+textarea,select,input{
+    margin:5px;
+}
+fieldset{
+    margin: 5px;
+    width:350px;
+}
+textarea:focus{
+    background-color: aqua;        
+}
+input[type=radio] + label {
+  color: blue;
+} 
+input[type=radio]:checked + label {
+  color: red;
+} 
+input[type=button]:hover{
+    background-color: orange;    
+}
+</style>
+</head>
+<body>
+<form>
+    <textarea name="message" rows="10" cols="50">請在此輸入訊息</textarea><br>
+    <fieldset>
+        <legend>性別</legend>    
+        <input type="radio" name="gender" value="male"> 男 
+        <input type="radio" name="gender" value="female" checked> 女
+        <input type="radio" name="gender" value="other"> 其他
+    </fieldset>
+    <fieldset>
+        <legend>飲料</legend>      
+        <input type="radio" name="drink" id="coffee" value="coffee">
+        <label for="coffee"> 咖啡 </label><br>
+        <input type="radio" name="drink" id="tea" value="tea">
+        <label for="tea"> 茶 </label><br>
+        <input type="radio" name="drink" id="water" value="other">
+        <label for="water"> 水 </label><br>
+    </fieldset>     
+    訂購個數(1-5)
+    <select name="num4">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br>
+    <fieldset>
+        <legend>喜歡的運動</legend>    
+        <input type="checkbox" name="sport" value="baseball">棒球
+        <input type="checkbox" name="sport" value="basketball">籃球
+        <input type="checkbox" name="sport" value="football">足球
+    </fieldset>
+    <input type="button" value="送出">
+    <input type="reset" value="清空表單">   
+</form> 
+</body>
+</html>

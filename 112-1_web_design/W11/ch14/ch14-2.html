@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch14-2函式</title>
+<meta charset="utf-8">
+<style>
+    div {
+        width:200px;
+        border: 1px red solid;
+        margin: 10px;
+    }    
+</style>
+</head>
+<body>
+<div id="func1"></div>
+<div id="func2"></div>
+<script>
+function add(x,y,z){
+    return x+y+z;
+}
+document.getElementById("func1").innerHTML = add(1,2,3);
+function bmi(w,h){
+    return (w/(h*h));
+}
+document.getElementById("func2").innerHTML = bmi(80,1.68);
+</script>
+</body>
+</html>

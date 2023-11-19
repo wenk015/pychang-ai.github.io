@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch14-3-2滑鼠與鍵盤事件</title>
+<meta charset="utf-8">
+<style>
+    div {
+        width:200px;
+        border: 1px red solid;
+        margin: 10px 0;
+    }    
+</style>
+<script>
+function myEvent(E){
+    if (window.event) E=window.event;
+    var myDiv = document.getElementById("result");
+    myDiv.innerHTML += "<br>"+E.type;
+}
+window.onload = function(){
+    var myBtn = document.getElementById("myBtn");
+    var myText = document.getElementById("myText");
+    myBtn.onclick = myEvent;
+    myBtn.ondblclick = myEvent;
+    myBtn.onmousedown = myEvent;
+    myBtn.onmouseup = myEvent;
+    myBtn.onmouseover = myEvent;
+    myBtn.onmouseout = myEvent;
+    //myBtn.onmousemove = myEvent;
+    myText.onkeydown = myEvent;
+    myText.onkeyup = myEvent;
+    myText.onkeypress = myEvent;
+}
+function clearResult(){
+    var myDiv = document.getElementById("result");
+    myDiv.innerHTML = "顯示結果"; 
+}
+</script>
+</head>
+<body>
+<button type="button"  id="myBtn">按鈕</button><br>
+<textarea id="myText"></textarea><br>
+<button type="button" onclick="clearResult()">清空結果</button><br>
+<div id="result">顯示結果</div>
+</body>
+</html>

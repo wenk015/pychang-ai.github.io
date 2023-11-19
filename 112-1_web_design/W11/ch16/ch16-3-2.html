@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sessionStorage功能</title>
+</head>
+<body>
+<p><button onclick="count()" type="button">點擊</button></p>
+<div id="txt"></div>
+<script>
+  function count(){
+    if(typeof(Storage)!=="undefined"){
+      if (sessionStorage.cnt>0){
+        sessionStorage.cnt = Number(sessionStorage.cnt) + 1;
+      }else{
+        sessionStorage.cnt = 1;
+      }
+      document.getElementById("txt").innerHTML="點擊" + sessionStorage.cnt + "次";
+    }else{
+      document.getElementById("txt").innerHTML="瀏覽器不支援sessionStorage";
+    }
+  }
+</script>
+</body>
+</html>

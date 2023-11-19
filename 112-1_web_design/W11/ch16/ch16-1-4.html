@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Canvas功能-填充顏色與線段顏色</title>
+</head>
+<body>
+<canvas id="Canvas1" width="400" height="200" style="border:2px solid #0000ff;">
+瀏覽器不支援HTML5 Canvas
+</canvas>
+<script>
+    var ca=document.getElementById("Canvas1");
+    var ct=ca.getContext("2d");
+    ct.fillStyle="#0000FF";
+    ct.fillRect(100,50,200,100); //(100,50)為左上角座標，寬度200高度100的長方形
+    ct.strokeStyle = "#FF0000";
+    ct.lineWidth = 5;
+    ct.strokeRect(60, 40, 100, 80);  //(60,40)為左上角座標，寬度100高度80的長方形
+    ct.clearRect(200, 70, 40, 60);   //清空長方形範圍，(200,70)為左上角座標，寬度40高度60的長方形
+</script>
+</body>
+</html>

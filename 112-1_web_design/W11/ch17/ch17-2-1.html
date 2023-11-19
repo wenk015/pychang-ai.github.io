@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch16-2-1圖片播放器的初步架構</title>
+<meta charset="utf-8">
+<style>
+.outside{
+    position: relative;
+    width: 400px;
+}
+.img{
+    width: 400px;
+}
+.serial{
+    position: absolute;
+    top:10px;
+    left:10px;
+    background-color: lightblue;
+}
+.caption{
+    width: 150px;
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    margin-left: -75px;
+    background-color: lightblue;  
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="outside">
+    <div>    
+        <div class="serial">1/4</div>
+        <img class="img" src="img/1.jpg">
+        <div class="caption">四草綠色隧道</div>
+    </div> 
+    <div>    
+        <div class="serial">2/4</div>
+        <img class="img" src="img/2.jpg">
+        <div class="caption">鹽田</div>
+    </div> 
+    <div>    
+        <div class="serial">3/4</div>
+        <img class="img" src="img/3.jpg">
+        <div class="caption">田園風光</div>
+    </div>  
+    <div>    
+        <div class="serial">4/4</div>
+        <img class="img" src="img/4.jpg">
+        <div class="caption">檳榔樹</div>
+    </div>  
+</div>
+</body>
+</html>

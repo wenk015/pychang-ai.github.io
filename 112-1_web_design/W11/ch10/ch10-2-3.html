@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch10-2-3使用scale縮放區塊</title>
+<meta charset="utf-8">
+<style>
+div {
+    width: 250px;
+    height: 100px;
+    background-color: orange;
+    border: 1px blue dashed;
+    margin:100px 0;
+}
+.scale1 {
+    -ms-transform: scale(0.8,2); 
+    -webkit-transform: scale(0.8,2);
+    transform: scale(0.8,2); 
+}
+</style>
+</head>
+<body>
+<div>沒有縮放區塊</div>
+<div class="scale1">使用transform: scale(0.8,2)縮放區塊</div>
+</body>
+</html>

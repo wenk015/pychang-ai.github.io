@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Canvas功能-使用arc繪製圓弧</title>
+</head>
+<body>
+<canvas id="Canvas1" width="400" height="400" style="border:2px solid #0000ff;">
+瀏覽器不支援HTML5 Canvas
+</canvas>
+<script>
+    var ca=document.getElementById("Canvas1");
+    var ct=ca.getContext("2d");
+    ct.beginPath();
+    ct.arc(100, 100, 50, 0, Math.PI/2); //圓心為(100,100) 半徑為50 徑度為0到PI/2的圓
+    ct.stroke();
+    ct.beginPath();
+    ct.arc(300, 100, 50, Math.PI, 0); //圓心為(300,100) 半徑為50 徑度為PI到0的圓
+    ct.closePath(); //封閉路徑
+    ct.stroke();
+    ct.beginPath();
+    ct.arc(100, 250, 50, 0, Math.PI/2, false); //圓心為(100,250) 半徑為50 徑度為0到PI/2的圓 false 順時針
+    ct.fillStyle = "blue";
+    ct.fill();
+    ct.beginPath();
+    ct.arc(300, 250, 50, -Math.PI / 2, Math.PI / 2, true); //圓心為(300,250) 半徑為50 徑度為-PI/2到PI/2的圓 true逆時針
+    ct.fill();
+</script>
+</body>
+</html>

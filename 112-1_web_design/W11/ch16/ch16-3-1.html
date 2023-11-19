@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>localStorage功能</title>
+</head>
+<body>
+<div id="txt"></div>
+<script>
+    if(typeof(Storage)!=="undefined"){
+      localStorage.setItem("section", "localStorage功能");
+      document.getElementById("txt").innerHTML = "本單元為" +  localStorage.getItem("section"); 
+    }else{
+      document.getElementById("txt").innerHTML="瀏覽器不支援localStorage";
+    }
+</script>
+</body>
+</html>

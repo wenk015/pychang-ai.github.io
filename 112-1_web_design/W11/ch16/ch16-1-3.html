@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Canvas功能-填充封閉區域</title>
+</head>
+<body>
+<canvas id="Canvas1" width="400" height="200" style="border:2px solid #0000ff;">
+瀏覽器不支援HTML5 Canvas
+</canvas>
+<script>
+    var ca=document.getElementById("Canvas1");
+    var ct=ca.getContext("2d");
+    ct.beginPath();
+    ct.moveTo(50, 50);
+    ct.lineTo(225, 50);
+    ct.lineTo(350, 150);
+    ct.fill(); //填充封閉區域，如果為開放區域，會自動形成封閉區域
+</script>
+</body>
+</html>

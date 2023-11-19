@@ -1,0 +1,16 @@
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="82" width="202" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" id="svg_1" height="80" width="200" y="0.637499" x="-0.5" stroke-width="1.5" fill="#00bf5f"/>
+  <text stroke="#000" transform="matrix(1.6920960256030115,0,0,1.813110695709214,-162.17580529151147,-92.924507970907) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_4" y="127.01904" x="218" stroke-opacity="null" stroke-width="0" fill="#ffff56">HTML5</text>
+  <text stroke="#000" transform="matrix(1.7275198789338473,0,0,1.8217286353385018,-31.801088368072673,-17.454394651047153) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_5" y="40.965176" x="38.019845" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#ffff56">HTML5</text>
+ </g>
+</svg>

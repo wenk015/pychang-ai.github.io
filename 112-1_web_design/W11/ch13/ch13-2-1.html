@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch13-2-1 for迴圈</title>
+<meta charset="utf-8">
+<style>
+div {
+    width:400px;
+    border: 1px red solid;
+    margin: 10px;
+}    
+</style>
+</head>
+<body>
+<div id="loop1"></div>
+<div id="loop2"></div>
+<script>
+var i,r1="";
+for (i=1; i<10; i++) {
+    r1=r1+i+" ";
+}
+document.getElementById("loop1").innerHTML = r1;
+var sum=0,i,r2="";
+for (i=1; i<10; i++) {
+    sum=sum+i;
+}
+r2=sum;
+document.getElementById("loop2").innerHTML = r2;
+</script>
+</body>
+</html>

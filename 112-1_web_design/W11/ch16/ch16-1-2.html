@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Canvas功能-描繪線段並封閉成區域</title>
+</head>
+<body>
+<canvas id="Canvas1" width="400" height="200" style="border:2px solid #0000ff;">
+瀏覽器不支援HTML5 Canvas
+</canvas>
+<script>
+    var ca=document.getElementById("Canvas1");
+    var ct=ca.getContext("2d");
+    //描繪線段
+    ct.beginPath(); 
+    ct.moveTo(50,50);
+    ct.lineTo(150,150);
+    ct.stroke(); //描邊
+    ct.moveTo(50,150);
+    ct.lineTo(150,50);
+    ct.stroke(); //描邊
+    //描繪線段並封閉成區域
+    ct.beginPath();
+    ct.moveTo(250, 50);
+    ct.lineTo(350, 50); //描繪兩條線
+    ct.lineTo(350, 150);
+    ct.closePath(); //使用closePath會讓此兩條線形成封閉區域的三角形
+    ct.stroke(); //描邊
+</script>
+</body>
+</html>

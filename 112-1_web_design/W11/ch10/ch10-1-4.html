@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch10-1-4 border-radius特效範例</title>
+<meta charset="utf-8">
+<style>
+img{
+    width:40%;
+    box-shadow: 0 6px 12px green;
+    margin: 30px 0 0;
+}
+.img1{
+    border-radius: 180px; /*(左上 右上 右下 左下)*/  
+}
+.img2{
+    border-radius: 20px 40px; /*(左上 右下)   (右上 左下)*/
+}
+.img3{
+    border-radius: 20px 40px 60px; /*左上  (右上 左下)  右下 */
+}
+.img4{
+    border-radius: 20px 40px 60px 80px; /*左上  右上  右下  左下*/
+}
+</style>
+</head>
+<body>
+<img src="img/1.jpg"  class="img1">
+<p>border-radius: 180px; /*(左上 右上 右下 左下)*/</p>
+<img src="img/2.jpg"  class="img2">
+<p>border-radius: 20px 40px; /*(左上 右下)   (右上 左下)*/</p>
+<img src="img/1.jpg"  class="img3">
+<p>border-radius: 20px 40px 60px; /*左上  (右上 左下)  右下 */</p>
+<img src="img/2.jpg"  class="img4">
+<p>border-radius: 20px 40px 60px 80px; /*左上  右上  右下  左下*/</p>
+</body>
+</html>

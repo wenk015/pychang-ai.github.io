@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>ch11-1-1使用tr、th與td製作表格</title>
+<meta charset="utf-8">
+<style>
+table{
+    border: 3px blue solid;
+    border-collapse:collapse;
+}
+th,td{
+    border: 2px red dashed;
+    padding: 5px;
+}
+tr:nth-child(even){
+    background-color: lightgreen;        
+}
+tr:hover{
+    background-color: aqua;    
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>姓名</th>
+    <th>電話</th>
+  </tr>
+  <tr>
+    <td>王大德</td>
+    <td>1234-56789</td>
+  </tr>
+  <tr>
+    <td>林小寶</td>
+    <td>4321-98765</td>
+  </tr>
+  <tr>
+    <td>黃大偉</td>
+    <td>1234-56789</td>
+  </tr>
+  <tr>
+    <td>陳大寶</td>
+    <td>4321-98765</td>
+  </tr>
+</table>
+</body>
+</html>
