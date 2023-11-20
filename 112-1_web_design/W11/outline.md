@@ -12,4 +12,4 @@
 
 ## third class
 - chatgpt register
-- team discussion
+- team demostartion & discussion
