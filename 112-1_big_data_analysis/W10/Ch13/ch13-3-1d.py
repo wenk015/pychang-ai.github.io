@@ -6,6 +6,6 @@ print("current dir: " + os.getcwd())
 
 df = pd.read_csv("test.csv")
 # 建立布林遮罩
-df1 = pd.isnull(df)
-print(df1)
-df1.to_html("ch13-3-1d.html")
+df2 = pd.isnull(df);
+print(df2)
+df2.to_html("ch13-3-1d.html")
