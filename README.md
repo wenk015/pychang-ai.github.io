@@ -21,4 +21,5 @@ git config --global user.email johndoe@example.com
 
 ### Git font setting
 
-<img src="images_topics\VSCODE_adjust_vs_code_outline_fontsize_2023_0714.png"/>
+<img src="images_topics\VSCODE_adjust_vs_code_outline_fontsize_2023_0714.png"/>;
+
