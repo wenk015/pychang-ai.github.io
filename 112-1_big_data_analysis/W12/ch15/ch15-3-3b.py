@@ -1,7 +1,10 @@
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
 raw_df = pd.read_csv("boston.csv", sep="\s+", skiprows=22, header=None)
 data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
 target = raw_df.values[1::2, 2]

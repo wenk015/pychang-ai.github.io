@@ -1,7 +1,10 @@
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing, linear_model
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
 titanic = pd.read_csv("titanic.csv")
 print(titanic.info())
 print("---------------------------")
