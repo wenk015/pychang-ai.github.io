@@ -2,11 +2,18 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import numpy as np
+
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
+
+
 plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei'] 
 plt.rcParams['axes.unicode_minus'] = False
 
 raw_df = pd.read_csv("boston.csv", sep="\s+", skiprows=22, header=None)
-data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
+data = np.hstack([raw_df.values[::3, :], raw_df.values[1::2, :2]])
 target = raw_df.values[1::2, 2]
 feature_names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM',
                  'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT']

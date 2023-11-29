@@ -2,6 +2,14 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import numpy as np
+
+
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
+
+
 plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei'] 
 plt.rcParams['axes.unicode_minus'] = False
 
