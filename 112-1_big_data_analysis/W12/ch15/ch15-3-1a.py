@@ -13,7 +13,7 @@ X = pd.DataFrame(area_dists, columns=["店面積", "距捷運"])
 target = pd.DataFrame(sales, columns=["月營收"])
 y = target["月營收"]
 lm = LinearRegression()
-lm.fit(X, y)
+lm.fit(X, y);
 print("迴歸係數:", lm.coef_)
 print("截距:", lm.intercept_ )
 
