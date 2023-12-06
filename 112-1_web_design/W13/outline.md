@@ -3,13 +3,15 @@
 ## class 1, class 2
 
 - Ch07, Ch08, Ch09
+- table
 
 ## class 3
 
+- homepage report
 - add buttons to your homepage
-- add navigation to your homepage
+- add navigation bar to your homepage
 
-## others
+## other supplements
 
 - Javascript
 - LEECODE

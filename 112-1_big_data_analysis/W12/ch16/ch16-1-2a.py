@@ -1,6 +1,10 @@
 import pandas as pd
 from sklearn import preprocessing, tree
 from sklearn.model_selection import train_test_split
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("current dir: " + os.getcwd())
 
 titanic = pd.read_csv("titanic.csv")
 # 轉換欄位值成為數值
