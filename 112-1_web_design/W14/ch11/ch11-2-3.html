@@ -13,6 +13,16 @@
         input:required {
             background-color: yellow;
         }
+    </style>
+    <style>
+        input {
+            border: 1px blue solid;
+            margin: 10px 0;
+        }
+
+        input:required {
+            background-color: yellow;
+        }
 
         input:disabled {
             background-color: lightgray;
@@ -33,6 +43,20 @@
 </head>
 
 <body>
+    <form>
+        Name<input type="text" name="username" required placeholder="your name"><br>
+        Password<input type="password" name="usrpass" required> <br>
+        Birthday<input type="date" name="usrpass" required> <br>
+        Email<input type="email" name="usrpass" required> <br>
+        Phone<input type="tel" name="usrphone" value="09xx-xxx-xxx"> <br>
+        EnterTime<input type="datetime-local" name="usrdatetime"> <br>
+        EnterDateTime<input type="url" name="usrurl" required> <br>
+        Enter URL<input type="url" name="usrurl" required> <br>
+        EnterDateTime<input type="url" name="usrurl" required> <br>
+        Enter the order number(1-10) <input type="number" name="num1" min="1" max="10" disabled> <br>;
+        Enter the order number(2-10, only even) <input type="number" name="num2" min="2" max="10" step="2"> <br>
+    </form>
+    <P>
     <form>
         姓名<input type="text" name="usrname" required placeholder="王大寶"><br>
         密碼<input type="password" name="usrpass" required><br>
