@@ -1,0 +1,34 @@
+<style>
+    div {
+        width: 200px;
+        border: 1px red;
+        margin: 0px;
+    }
+</style>
+
+
+<script>
+    function myEvent(E) {
+        if (window.Event) E = window.Event;
+        var myDiv = document.getElementById("myText");
+        myDiv.innerHTML += "<br>" + E.type;
+
+    }
+
+    window.onload = function () {
+        var myBtn = document.getElementById("myBtn");
+        var myText = document.getElementById("myText");
+        myBtn.onclick = myEvent;
+        myBtn.onmouseover = myEvent;
+        myBtn.onmouseout = myEvent;
+        myBtn.onmouseup = myEvent;
+        myBtn.onmousedown = myEvent;
+        myBtn.onkeyup = myEvent;
+        myBtn.onkeypress = myEvent;
+
+    }
+
+
+</script>
+<button type="button" id="myBtn">button</button><BR>
+<textarea id="myText"></textarea><br>

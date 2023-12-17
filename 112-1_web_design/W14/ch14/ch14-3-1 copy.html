@@ -1,0 +1,35 @@
+<style>
+    div {
+        width: 200px;
+        border: 1px red solid;
+        margin: 10px;
+    }
+</style>
+
+
+<script>
+    function showdate() {
+        document.getElementById("js2").innerHTML = Date();
+
+    }
+    window.onload = function () {
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function () {
+            document.getElementById('js3').innerHTML = Date();
+        }
+    }
+
+</script>
+
+<div id=js3>
+
+    <p id="js1"></p>
+    <button type="button" onclick="document.getElementById('js1').innerHTML= Date()">
+        Display time
+    </button>
+    <p id="js2"></p>
+    <button type="button" onclick="showdate()">Display time</button>
+
+    <p id="js3"></p>
+    <button type="button" id="btn1"> Display time</button>
+</div>
