@@ -9,9 +9,10 @@
 
 <script>
     function myEvent(E) {
-        if (window.Event) E = window.Event;
-        var myDiv = document.getElementById("myText");
-        myDiv.innerHTML += "<br>" + E.type;
+
+        if (window.event) e = window.event;
+        var myDiv = document.getElementById("myResult");
+        myDiv.innerHTML += "<br>" + e.type;        
 
     }
 
@@ -19,16 +20,19 @@
         var myBtn = document.getElementById("myBtn");
         var myText = document.getElementById("myText");
         myBtn.onclick = myEvent;
+        myBtn.ondblclick = myEvent;
+        myBtn.onmousedown = myEvent;
+        myBtn.onmouseup = myEvent;
         myBtn.onmouseover = myEvent;
         myBtn.onmouseout = myEvent;
-        myBtn.onmouseup = myEvent;
-        myBtn.onmousedown = myEvent;
-        myBtn.onkeyup = myEvent;
-        myBtn.onkeypress = myEvent;
-
+        //myBtn.onmousemove = myEvent;
+        myText.onkeydown = myEvent;
+        myText.onkeyup = myEvent;
+        myText.onkeypress = myEvent;
     }
 
 
 </script>
-<button type="button" id="myBtn">button</button><BR>
 <textarea id="myText"></textarea><br>
+<button type="button" id="myBtn">button</button><BR>
+<div id="myResult"></div>
