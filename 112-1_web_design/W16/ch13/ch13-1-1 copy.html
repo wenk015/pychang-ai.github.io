@@ -10,12 +10,18 @@
 <div id="if3">if3 here </div>
 
 <script>
-    var score = 60, a = 13, r1, r2, r3;
+    var score = 0, a = 13, r1, r2, r3;
     if (score > 59) {
         r1 = "及格";
-        document.getElementById("if1").innerHTML = r1;
-    } else {
-        r1 = "不及格";
     }
+    document.getElementById("if1").innerHTML = r1;
 
+    if ((a % 2) == 1) {
+        r2 = "奇數";
+    } else {
+        r2 = "偶數";
+    }
+    document.getElementById("if2").innerHTML = r2;
+    r3 = (((a % 2) == 1) ? '奇數' : '偶數');
+    document.getElementById("if3").innerHTML = r3;
 </script>
