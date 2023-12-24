@@ -13,9 +13,18 @@
   - javascript crud example
   - javascript login example
 
+## HOME Work
+
+- PR Personal web
+  - <https://github.com/pychang-ai/112-1_web_hw1_personal_web/tree/main>
+
+- PR JSGame & modification
+  - example:
+  - <https://pychang-ai.github.io/112-1_web_hw2_js_game.github.io/>
+
 ## final project
 
-- due date
+- due date 0107
 - tempalte
   - word
   - ppt
@@ -23,3 +32,5 @@
 - print paperwork
 
 ## check project progresses
+
+## call for expert team
