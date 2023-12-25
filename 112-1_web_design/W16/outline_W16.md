@@ -29,7 +29,9 @@
   - word
   - ppt
   - github
-- print paperwork
+    - github.io > github.io
+
+print paperwork
 
 ## check project progresses
 
